@@ -13,12 +13,14 @@ RUN apt-get install -y	php5-gd \
 			php5-json \
 			php5-intl \
 			php5-mcrypt \
+			php5-curl \
 			php5-imagick \
 			nginx \
 			php5-fpm \
 			curl \
 			sqlite3 \
-			php5-sqlite
+			php5-sqlite \
+			smbclient
 
 #generate SSL certs
 RUN mkdir /etc/ssl/nginx
