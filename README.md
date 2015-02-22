@@ -11,4 +11,5 @@ Get me started
 1. Set your hostname in the Dockerfile
 2. Build from Repo `docker build -t owncloud .`
 3. Start via `docker run -d -p 443:443 -v /where/the/repo/is/data:/var/www/owncloud/data -v /where/the/repo/is/config:/var/www/ownlcoud/config owncloud`
-4. [Trust the SSL certificate](http://stackoverflow.com/a/15076602/359326)
+4. Change permissions of presistent folders with `chown -R www-data: ./config ./data`
+5. [Trust the SSL certificate](http://stackoverflow.com/a/15076602/359326)
