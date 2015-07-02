@@ -3,7 +3,7 @@ MAINTAINER "Tobias Sturm"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV owncloudVersion 8.0.0
+ENV owncloudVersion 8.0.4
 ENV nginxPort 443
 ENV hostname YOUR_HOSTNAME_HERE
 
@@ -45,7 +45,7 @@ RUN chown -R www-data: /var/www/owncloud/config
 RUN ln -s /etc/ssl/nginx/${hostname}.crt /var/www/owncloud/config
 
 #expose port that connects to nginx
-EXPOSE ${nginxPort}
+EXPOSE 443
 
 #wire logging to stdout
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
